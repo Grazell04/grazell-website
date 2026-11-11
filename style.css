@@ -1,0 +1,468 @@
+
+/* ===================================================== */
+/* 1. GENERAL STYLES                                     */
+/* ===================================================== */
+
+/* The universal selector (*) applies these styles to ALL HTML elements. */
+* {
+    margin: 0;              /* Removes the default outside spacing of elements */
+    padding: 0;             /* Removes the default inside spacing of elements */
+    box-sizing: border-box; /* Includes padding and border in the total element width and height */
+}
+
+/* Styles the entire webpage body */
+body {
+    font-family: Arial, Helvetica, sans-serif; /* Sets the font style */
+    background-color: #0f172a; /* Sets the dark blue background color */
+    color: #f8fafc;          /* Sets the default text color to almost white */
+    line-height: 1.6;        /* Adds comfortable spacing between lines of text */
+}
+
+/* Removes the underline from all links and makes them inherit their parent's text color */
+a {
+    text-decoration: none; /* Removes the default underline */
+    color: inherit;         /* Uses the text color of the parent element */
+}
+
+
+/* ===================================================== */
+/* 2. NAVIGATION                                         */
+/* ===================================================== */
+
+/* Styles the header that contains the navigation bar */
+header {
+    background-color: #111827; /* Gives the header a dark background */
+    position: sticky;           /* Keeps the header visible while scrolling */
+    top: 0;                     /* Sticks the header to the top of the screen */
+    z-index: 100;               /* Keeps the navigation above other page elements */
+}
+
+/* Styles the navigation bar container */
+.navbar {
+    max-width: 1200px;          /* Prevents the navigation from becoming too wide */
+    margin: auto;               /* Centers the navigation horizontally */
+    padding: 20px;              /* Adds space inside the navigation bar */
+    display: flex;              /* Places the logo and links in a flexible row */
+    justify-content: space-between; /* Places the logo and navigation links apart */
+    align-items: center;        /* Vertically aligns the logo and navigation links */
+    flex-wrap: wrap;            /* Allows items to move to another line if needed */
+    gap: 15px;                  /* Adds space between flex items */
+}
+
+/* Styles the website logo or owner's name */
+.logo {
+    font-size: 22px;            /* Sets the logo text size */
+    font-weight: bold;          /* Makes the logo text bold */
+    color: #ffffff;             /* Makes the logo text white */
+}
+
+/* Highlights the owner's name in the logo and Home heading */
+.logo span,
+.hero-text h1 span {
+    color: #38bdf8;             /* Applies a light blue color */
+}
+
+/* Styles the navigation menu list */
+.nav-links {
+    list-style: none;           /* Removes the default bullet points */
+    display: flex;              /* Displays navigation links horizontally */
+    flex-wrap: wrap;             /* Allows links to wrap when space is limited */
+    gap: 18px;                  /* Adds space between navigation links */
+}
+
+/* Styles the individual navigation links */
+.nav-links a {
+    color: #cbd5e1;              /* Sets the links to light gray */
+    transition: color 0.3s;      /* Makes color changes smooth */
+}
+
+/* Changes the navigation link color when the mouse hovers over it */
+.nav-links a:hover {
+    color: #38bdf8;              /* Changes the link color to light blue */
+}
+
+
+/* ===================================================== */
+/* 3. HOME SECTION                                      */
+/* ===================================================== */
+
+/* Styles the main introduction area of the website */
+.hero {
+    max-width: 1200px;          /* Limits the maximum width of the Home section */
+    margin: auto;               /* Centers the section on the webpage */
+    padding: 100px 30px;        /* Adds 100px vertical and 30px horizontal spacing */
+    display: flex;              /* Places the introduction and image side by side */
+    justify-content: space-between; /* Creates space between text and image */
+    align-items: center;        /* Vertically centers the text and image */
+    gap: 50px;                  /* Adds space between the text and image */
+    min-height: 580px;          /* Sets the minimum height of the Home section */
+}
+
+/* Allows the introduction text to occupy the available space */
+.hero-text {
+    flex: 1;                    /* Allows the text container to grow */
+}
+
+/* Styles the main heading containing the owner's name */
+.hero-text h1 {
+    font-size: 48px;            /* Makes the main heading large */
+    margin: 15px 0;             /* Adds 15px top and bottom spacing */
+}
+
+/* Styles the professional title below the main heading */
+.hero-text h2 {
+    color: #cbd5e1;              /* Sets the heading color to light gray */
+    font-size: 26px;            /* Sets the heading text size */
+    margin-bottom: 15px;        /* Adds space below the heading */
+}
+
+/* Styles the container of the profile picture */
+.hero-image {
+    width: 300px;               /* Sets the image container width */
+    height: 300px;              /* Sets the image container height */
+    flex-shrink: 0;             /* Prevents the image from becoming smaller */
+    border: 4px solid #38bdf8;  /* Adds a blue border around the image */
+    border-radius: 50%;         /* Makes the image container circular */
+    overflow: hidden;           /* Hides image parts outside the circular container */
+    background-color: #1e293b;  /* Sets the background behind the image */
+    box-shadow: 0 0 30px #38bdf833; /* Adds a soft blue glowing shadow */
+}
+
+/* Makes the profile image fit inside its container */
+.hero-image img {
+    width: 100%;                /* Makes the image fill the container width */
+    height: 100%;               /* Makes the image fill the container height */
+    object-fit: cover;          /* Crops the image proportionally without stretching it */
+}
+
+/* Styles the fallback initials displayed if the profile image is unavailable */
+.photo-placeholder {
+    width: 100%;                /* Occupies the full container width */
+    height: 100%;               /* Occupies the full container height */
+    justify-content: center;     /* Centers the initials horizontally */
+    align-items: center;        /* Centers the initials vertically */
+    color: #38bdf8;              /* Makes the initials light blue */
+    font-size: 70px;            /* Makes the initials large */
+    font-weight: bold;          /* Makes the initials bold */
+}
+
+
+/* ===================================================== */
+/* 4. BUTTONS                                           */
+/* ===================================================== */
+
+/* Styles the container holding the Home section buttons */
+.hero-buttons {
+    display: flex;              /* Places buttons in a flexible row */
+    flex-wrap: wrap;             /* Allows buttons to move to another line */
+    gap: 15px;                  /* Adds space between buttons */
+    margin-top: 25px;            /* Adds space above the buttons */
+}
+
+/* Styles all elements using the btn class */
+.btn {
+    display: inline-block;       /* Allows the link to behave like a styled button */
+    background-color: #38bdf8;   /* Sets the button background to blue */
+    color: #0f172a;              /* Sets the button text to dark blue */
+    padding: 12px 22px;          /* Adds space inside the button */
+    border-radius: 6px;          /* Rounds the button corners */
+    font-weight: bold;           /* Makes the button text bold */
+    margin-top: 15px;            /* Adds space above the button */
+    transition: 0.3s;            /* Makes hover effects smooth */
+}
+
+/* Adds an animation effect when the mouse moves over a button */
+.btn:hover {
+    background-color: #7dd3fc;   /* Changes the button background to lighter blue */
+    transform: translateY(-2px); /* Moves the button slightly upward */
+}
+
+/* Creates an outlined button instead of a solid button */
+.btn-outline {
+    background-color: transparent; /* Makes the button background transparent */
+    border: 2px solid #38bdf8;      /* Adds a blue outline */
+    color: #38bdf8;                 /* Makes the button text blue */
+}
+
+
+/* ===================================================== */
+/* 5. CONTENT SECTIONS                                  */
+/* ===================================================== */
+
+/* Provides the common layout and spacing for website sections */
+.section {
+    padding: 75px 30px;         /* Adds space inside each section */
+    max-width: 1200px;          /* Limits the section width */
+    margin: auto;               /* Centers the section horizontally */
+}
+
+/* Gives selected sections a full-width dark background */
+.section-dark {
+    max-width: none;            /* Removes the maximum width restriction */
+    background-color: #111827;  /* Changes the section background to dark gray */
+}
+
+/* Styles the headings of the website sections */
+.section-title {
+    font-size: 32px;            /* Sets the section heading size */
+    color: #38bdf8;              /* Makes the heading light blue */
+}
+
+/* Organizes the About section into two equal columns */
+.about-content {
+    display: grid;              /* Uses CSS Grid for the layout */
+    grid-template-columns: 1fr 1fr; /* Creates two equal-width columns */
+    gap: 40px;                  /* Adds space between the columns */
+}
+
+/* Styles the headings inside the About and Resume sections */
+.about-content h3,
+.resume-box h3 {
+    color: #38bdf8;              /* Makes the headings light blue */
+    margin-bottom: 12px;        /* Adds space below each heading */
+}
+
+/* Adds spacing below paragraphs in the About section */
+.about-content p {
+    margin-bottom: 15px;        /* Separates paragraphs */
+}
+
+/* Styles the personal information container */
+.personal-info {
+    background-color: #1e293b;  /* Adds a dark card background */
+    padding: 25px;              /* Adds internal spacing */
+    border-radius: 10px;        /* Rounds the container corners */
+}
+
+/* Adds separators between personal information entries */
+.personal-info p {
+    border-bottom: 1px solid #334155; /* Adds a thin bottom border */
+    padding: 10px 0;            /* Adds vertical spacing inside each entry */
+}
+
+
+/* ===================================================== */
+/* 6. SKILLS AND PROJECT CARDS                          */
+/* ===================================================== */
+
+/* Arranges the Skills and Projects cards in a grid */
+.card-container {
+    display: grid;              /* Uses CSS Grid to organize cards */
+    grid-template-columns: repeat(3, 1fr); /* Creates three equal columns */
+    gap: 22px;                  /* Adds space between cards */
+    max-width: 1200px;          /* Limits the container width */
+    margin: auto;               /* Centers the card container */
+}
+
+/* Common styling for all skill and project cards */
+.card {
+    background-color: #1e293b;  /* Gives each card a dark background */
+    padding: 25px;              /* Adds space inside each card */
+    border: 1px solid #334155;  /* Adds a thin border */
+    border-radius: 10px;        /* Rounds the card corners */
+    transition: 0.3s;           /* Makes hover effects smooth */
+}
+
+/* Adds a floating effect when the mouse hovers over a card */
+.card:hover {
+    transform: translateY(-5px); /* Moves the card upward by 5px */
+    border-color: #38bdf8;       /* Changes the border to blue */
+}
+
+/* Styles the headings inside each card */
+.card h3 {
+    color: #38bdf8;              /* Makes card headings blue */
+    margin-bottom: 12px;        /* Adds space below the heading */
+}
+
+/* Gives project cards a minimum height */
+.project-card {
+    min-height: 220px;          /* Prevents project cards from becoming too short */
+}
+
+/* Styles the small labels or tags inside project cards */
+.tag {
+    display: inline-block;       /* Allows multiple tags to appear beside each other */
+    background-color: #334155;   /* Gives tags a dark gray background */
+    color: #7dd3fc;              /* Makes tag text light blue */
+    padding: 5px 10px;           /* Adds internal spacing */
+    margin: 15px 5px 0 0;         /* Adds spacing around each tag */
+    border-radius: 5px;          /* Rounds tag corners */
+    font-size: 13px;             /* Makes tag text smaller */
+}
+
+
+/* ===================================================== */
+/* 7. RESUME SECTION                                    */
+/* ===================================================== */
+
+/* Styles the main resume information container */
+.resume-box {
+    max-width: 850px;           /* Limits the resume width */
+    margin: auto;               /* Centers the resume container */
+    padding: 35px;              /* Adds internal spacing */
+    background-color: #1e293b;  /* Gives the resume a dark background */
+    border-radius: 10px;        /* Rounds the container corners */
+    border: 1px solid #334155;  /* Adds a thin border */
+}
+
+/* Adds space above resume headings */
+.resume-box h3 {
+    margin-top: 25px;           /* Separates different resume sections */
+}
+
+/* Adds left indentation to the resume lists */
+.resume-box ul {
+    padding-left: 25px;         /* Moves bullet points away from the left edge */
+}
+
+/* Styles the horizontal line inside the resume */
+.resume-box hr {
+    border: 1px solid #334155;  /* Changes the line color and thickness */
+    margin: 20px 0;             /* Adds vertical spacing above and below the line */
+}
+
+
+/* ===================================================== */
+/* 8. CONTACT SECTION                                   */
+/* ===================================================== */
+
+/* Centers the introductory paragraph in the Contact section */
+.contact-intro {
+    text-align: center;         /* Centers the text */
+    margin-bottom: 25px;        /* Adds space below the introduction */
+}
+
+/* Styles the main contact information container */
+.contact-card {
+    max-width: 600px;           /* Limits the contact card width */
+    margin: auto;               /* Centers the contact card */
+    padding: 30px;              /* Adds internal spacing */
+    border-radius: 10px;        /* Rounds the card corners */
+    background-color: #1e293b;  /* Gives the card a dark background */
+    text-align: center;         /* Centers the contact information */
+}
+
+/* Adds spacing between contact information paragraphs */
+.contact-card p {
+    margin: 15px 0;             /* Adds top and bottom spacing */
+    overflow-wrap: anywhere;   /* Allows long text, such as email addresses, to wrap */
+}
+
+/* Changes the color of contact links but excludes the button */
+.contact-card a:not(.btn) {
+    color: #38bdf8;              /* Makes email and phone links blue */
+}
+
+
+/* ===================================================== */
+/* 9. FOOTER                                            */
+/* ===================================================== */
+
+/* Styles the bottom part of the website */
+footer {
+    text-align: center;         /* Centers the footer text */
+    padding: 25px;              /* Adds space inside the footer */
+    background-color: #020617;  /* Gives the footer a very dark background */
+    color: #94a3b8;              /* Makes the footer text gray */
+    font-size: 14px;             /* Sets a smaller text size */
+}
+
+
+/* ===================================================== */
+/* 10. RESPONSIVE DESIGN - TABLETS AND SMALL LAPTOPS    */
+/* ===================================================== */
+
+/* These styles apply when the screen width is 850px or smaller.
+   This helps the website adjust to tablets and smaller screens. */
+@media screen and (max-width: 850px) {
+
+    /* Changes the Home layout from a row to a column.
+       column-reverse places the image above the text. */
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;      /* Centers the Home section text */
+        padding: 60px 25px;     /* Reduces the section spacing */
+    }
+
+    /* Reduces the main heading size for smaller screens */
+    .hero-text h1 {
+        font-size: 36px;
+    }
+
+    /* Centers the Home section buttons */
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    /* Reduces the profile image size */
+    .hero-image {
+        width: 240px;
+        height: 240px;
+    }
+
+    /* Changes the About section into one column */
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    /* Changes the cards from three columns to two columns */
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Centers the navigation bar content */
+    .navbar {
+        justify-content: center;
+    }
+
+    /* Centers the navigation links */
+    .nav-links {
+        justify-content: center;
+    }
+}
+
+
+/* ===================================================== */
+/* 11. RESPONSIVE DESIGN - MOBILE PHONES                */
+/* ===================================================== */
+
+/* These styles apply when the screen width is 550px or smaller.
+   They make the website easier to view on mobile phones. */
+@media screen and (max-width: 550px) {
+
+    /* Displays only one card per row on small screens */
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* Reduces the spacing inside website sections */
+    .section {
+        padding: 50px 20px;
+    }
+
+    /* Reduces the size of section headings */
+    .section-title {
+        font-size: 27px;
+    }
+
+    /* Makes the main Home heading smaller */
+    .hero-text h1 {
+        font-size: 32px;
+    }
+
+    /* Reduces the spacing and text size of navigation links */
+    .nav-links {
+        gap: 12px;
+        font-size: 14px;
+    }
+
+    /* Reduces the internal spacing of the resume container */
+    .resume-box {
+        padding: 22px;
+    }
+}
+
+/* ===================================================== */
+/* END OF EXTERNAL CSS                                  */
+/* ===================================================== */

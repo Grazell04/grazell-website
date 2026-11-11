@@ -1,0 +1,584 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Defines the character encoding to support different characters -->
+    <meta charset="UTF-8">
+
+    <!-- Makes the website responsive on mobile phones, tablets, and laptops -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- The title displayed on the browser tab -->
+    <title>Grazell B. Quio | IT Specialist Portfolio</title>
+
+
+    <!-- EXTERNAL CSS
+         Connects the HTML file to the separate CSS file named style.css.
+         This is where the main website design and styling are stored. -->
+    <link rel="stylesheet" href="style.css">
+
+
+    <!-- INTERNAL CSS
+         Internal CSS is written inside the HTML document using the style tag.
+         It applies additional styles to specific elements of this webpage. -->
+    <style>
+
+        /* Makes scrolling between website sections smooth */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Styles text that uses the highlight class */
+        .highlight {
+            color: #38bdf8;
+            font-weight: bold;
+        }
+
+        /* Adds a blue vertical border and left spacing to the welcome paragraph */
+        #welcome {
+            border-left: 4px solid #38bdf8;
+            padding-left: 15px;
+        }
+
+        /* Centers all section titles and adds space below them */
+        .section-title {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <!-- ========================================= -->
+    <!-- NAVIGATION BAR -->
+    <!-- ========================================= -->
+
+    <!-- The header contains the website's navigation menu -->
+    <header>
+
+        <!-- The nav element contains links to different website sections -->
+        <nav class="navbar">
+
+            <!-- Website logo/name.
+                 Clicking it takes the visitor back to the Home section. -->
+            <a href="#home" class="logo">
+                GRAZELL <span>B. QUIO</span>
+            </a>
+
+            <!-- Unordered list containing the navigation links -->
+            <ul class="nav-links">
+
+                <!-- Each link uses an ID to navigate to its corresponding section -->
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#contact">Contact</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- ========================================= -->
+    <!-- HOME SECTION -->
+    <!-- ========================================= -->
+
+    <!-- The Home section is the first section visitors see -->
+    <section id="home" class="hero">
+
+        <!-- Container for the introduction and welcome text -->
+        <div class="hero-text">
+
+            <!-- Welcome message using the highlight class -->
+            <p class="highlight">
+                HELLO, WELCOME TO MY PORTFOLIO!
+            </p>
+
+            <!-- Main heading displaying the owner's name -->
+            <h1>
+                I'm <span>Grazell B. Quio</span>
+            </h1>
+
+            <!-- Displays the owner's desired professional career -->
+            <h2>Future IT Specialist</h2>
+
+            <!-- INLINE CSS EXAMPLE
+                 Inline CSS is written directly inside an HTML element
+                 using the style attribute.
+
+                 font-size changes the text size.
+                 line-height controls the spacing between lines. -->
+            <p id="welcome"
+               style="font-size: 17px; line-height: 1.8;">
+
+                An Information Technology student passionate about
+                computers, troubleshooting, networking, and technology.
+                I am eager to learn new skills and help organizations
+                solve technical problems.
+
+            </p>
+
+
+            <!-- Container for the two action buttons -->
+            <div class="hero-buttons">
+
+                <!-- Button that navigates to the Resume section -->
+                <a href="#resume" class="btn">
+                    View My Resume
+                </a>
+
+                <!-- Button that navigates to the Contact section -->
+                <a href="#contact" class="btn btn-outline">
+                    Contact Me
+                </a>
+
+            </div>
+        </div>
+
+
+        <!-- Container for the profile picture -->
+        <div class="hero-image">
+
+            <!-- Displays the profile picture.
+                 src specifies the image filename.
+                 alt provides alternative text if the image cannot load.
+
+                 onerror hides the broken image and displays the
+                 photo placeholder instead. -->
+            <img src="Grazell.jpg.jpg"
+                 alt="Profile photo of Grazell B. Quio"
+                 onerror="this.style.display='none';
+                 this.nextElementSibling.style.display='flex';">
+
+
+            <!-- Fallback placeholder.
+                 This appears when the profile image cannot be loaded.
+                 GQ represents the initials of the website owner. -->
+            <div class="photo-placeholder"
+                 style="display:none;">
+                GQ
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ========================================= -->
+    <!-- ABOUT SECTION -->
+    <!-- ========================================= -->
+
+    <!-- Contains personal information and a short introduction -->
+    <section id="about" class="section">
+
+        <!-- Heading of the About section -->
+        <h2 class="section-title">About Me</h2>
+
+        <!-- Container that organizes the About content into two parts -->
+        <div class="about-content">
+
+            <!-- First column: Personal introduction -->
+            <div>
+
+                <h3>Who I Am</h3>
+
+                <!-- Describes the owner's educational background and interests -->
+                <p>
+                    I am Grazell B. Quio, an Information Technology
+                    student at Negros Oriental State University –
+                    Siaton Campus. I am interested in developing
+                    my technical knowledge and pursuing a career
+                    as an IT Specialist.
+                </p>
+
+                <!-- Explains career goals and technical interests -->
+                <p>
+                    My goal is to use my skills in troubleshooting,
+                    computer maintenance, software applications,
+                    and information systems to support users
+                    and improve workplace productivity.
+                </p>
+
+            </div>
+
+
+            <!-- Second column: Personal information -->
+            <div class="personal-info">
+
+                <!-- Strong makes the labels bold -->
+                <p><strong>Full Name:</strong> Grazell B. Quio</p>
+
+                <p><strong>Course:</strong> BS Information Technology</p>
+
+                <p><strong>School:</strong> NORSU - Siaton Campus</p>
+
+                <p><strong>Career Goal:</strong> IT Specialist</p>
+
+                <p><strong>Location:</strong> Philippines</p>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ========================================= -->
+    <!-- SKILLS SECTION -->
+    <!-- ========================================= -->
+
+    <!-- Displays the technical skills and knowledge of the owner.
+
+         section-dark is an additional class used to apply
+         a different background color through the external CSS. -->
+    <section id="skills" class="section section-dark">
+
+        <!-- Section heading -->
+        <h2 class="section-title">My IT Skills</h2>
+
+
+        <!-- Container that holds all skill cards -->
+        <div class="card-container">
+
+
+            <!-- SKILL CARD 1 -->
+            <div class="card">
+
+                <!-- Skill title -->
+                <h3>Computer Troubleshooting</h3>
+
+                <!-- Description of the skill -->
+                <p>
+                    Learning to identify and resolve common
+                    computer hardware and software problems.
+                </p>
+
+            </div>
+
+
+            <!-- SKILL CARD 2 -->
+            <div class="card">
+
+                <h3>Networking</h3>
+
+                <p>
+                    Understanding basic networking concepts,
+                    IP addressing, and network devices.
+                </p>
+
+            </div>
+
+
+            <!-- SKILL CARD 3 -->
+            <div class="card">
+
+                <h3>Web Development</h3>
+
+                <p>
+                    Creating simple websites using HTML,
+                    CSS, and basic JavaScript.
+                </p>
+
+            </div>
+
+
+            <!-- SKILL CARD 4 -->
+            <div class="card">
+
+                <h3>Database Management</h3>
+
+                <p>
+                    Learning how to organize, manage,
+                    and maintain information in databases.
+                </p>
+
+            </div>
+
+
+            <!-- SKILL CARD 5 -->
+            <div class="card">
+
+                <h3>Technical Support</h3>
+
+                <p>
+                    Interested in assisting users with
+                    computer and technology-related concerns.
+                </p>
+
+            </div>
+
+
+            <!-- SKILL CARD 6 -->
+            <div class="card">
+
+                <h3>Information Systems</h3>
+
+                <p>
+                    Understanding system analysis,
+                    documentation, and system design.
+                </p>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ========================================= -->
+    <!-- PROJECTS SECTION -->
+    <!-- ========================================= -->
+
+    <!-- Displays the academic and personal projects -->
+    <section id="projects" class="section">
+
+        <!-- Section heading -->
+        <h2 class="section-title">My Projects</h2>
+
+
+        <!-- Container for the project cards -->
+        <div class="card-container">
+
+
+            <!-- PROJECT CARD 1 -->
+            <div class="card project-card">
+
+                <!-- Project name -->
+                <h3>Student Enrollment Management System</h3>
+
+                <!-- Explains the purpose of the project -->
+                <p>
+                    An academic system design for managing
+                    student information, enrollment records,
+                    courses, and reports.
+                </p>
+
+                <!-- Tags identify the technologies or concepts used -->
+                <span class="tag">System Analysis</span>
+                <span class="tag">Database Design</span>
+
+            </div>
+
+
+            <!-- PROJECT CARD 2 -->
+            <div class="card project-card">
+
+                <h3>Hotel Reservation System</h3>
+
+                <p>
+                    A system design project involving guest
+                    information, room availability,
+                    reservations, and payments.
+                </p>
+
+                <span class="tag">ERD</span>
+                <span class="tag">System Design</span>
+
+            </div>
+
+
+            <!-- PROJECT CARD 3 -->
+            <div class="card project-card">
+
+                <h3>Personal Portfolio Website</h3>
+
+                <p>
+                    A responsive personal website created
+                    to present my skills, education,
+                    projects, and professional goals.
+                </p>
+
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ========================================= -->
+    <!-- RESUME SECTION -->
+    <!-- ========================================= -->
+
+    <!-- Displays the owner's professional resume information -->
+    <section id="resume" class="section section-dark">
+
+        <!-- Section heading -->
+        <h2 class="section-title">My Resume</h2>
+
+
+        <!-- Container for all resume information -->
+        <div class="resume-box">
+
+            <!-- Name and professional title -->
+            <h3>Grazell B. Quio</h3>
+
+            <p class="highlight">
+                Aspiring IT Specialist
+            </p>
+
+            <!-- Horizontal line used to separate resume content -->
+            <hr>
+
+
+            <!-- CAREER OBJECTIVE -->
+            <h3>Career Objective</h3>
+
+            <p>
+                To obtain an entry-level IT position where I can
+                apply my knowledge of information technology,
+                develop my technical abilities, assist users,
+                and contribute to the success of an organization.
+            </p>
+
+
+            <!-- EDUCATIONAL BACKGROUND -->
+            <h3>Educational Background</h3>
+
+            <p><strong>Tertiary Education</strong></p>
+
+            <p>
+                Bachelor of Science in Information Technology
+                (BSIT)
+            </p>
+
+            <p>
+                Negros Oriental State University - Siaton Campus
+            </p>
+
+
+            <!-- TECHNICAL KNOWLEDGE -->
+            <h3>Technical Knowledge</h3>
+
+            <!-- Unordered list of technical knowledge -->
+            <ul>
+
+                <li>HTML and CSS fundamentals</li>
+
+                <li>Basic programming concepts</li>
+
+                <li>Database and system design fundamentals</li>
+
+                <li>Computer hardware and software concepts</li>
+
+                <li>Basic networking concepts</li>
+
+            </ul>
+
+
+            <!-- PERSONAL STRENGTHS -->
+            <h3>Personal Strengths</h3>
+
+            <!-- Unordered list of personal strengths -->
+            <ul>
+
+                <li>Willingness to learn</li>
+
+                <li>Problem-solving mindset</li>
+
+                <li>Communication and teamwork</li>
+
+                <li>Adaptability and responsibility</li>
+
+            </ul>
+
+
+            <!-- Resume request button.
+                 Clicking this button takes the visitor to Contact.
+                 This is not a PDF download link. -->
+            <a href="#contact" class="btn">
+                Request My Resume
+            </a>
+
+        </div>
+    </section>
+
+
+    <!-- ========================================= -->
+    <!-- CONTACT SECTION -->
+    <!-- ========================================= -->
+
+    <!-- Contains the owner's contact information -->
+    <section id="contact" class="section">
+
+        <!-- Section heading -->
+        <h2 class="section-title">Contact Me</h2>
+
+
+        <!-- Short invitation for visitors and potential employers -->
+        <p class="contact-intro">
+            I am open to opportunities where I can learn,
+            grow, and contribute as an IT professional.
+        </p>
+
+
+        <!-- Container for contact details -->
+        <div class="contact-card">
+
+
+            <!-- EMAIL ADDRESS
+                 mailto: opens the visitor's default email application
+                 and prepares a new message to the specified address. -->
+            <p>
+                <strong>Email:</strong>
+
+                <a href="mailto:qgrazell@gmail.com">
+                    qgrazell@gmail.com
+                </a>
+            </p>
+
+
+            <!-- PHONE NUMBER
+                 tel: allows compatible devices to open
+                 the phone application when the number is clicked. -->
+            <p>
+                <strong>Phone:</strong>
+
+                <a href="tel:09759341614">
+                    0975 934 1614
+                </a>
+            </p>
+
+
+            <!-- Displays the owner's location -->
+            <p>
+                <strong>Location:</strong> Philippines
+            </p>
+
+
+            <!-- Button that opens an email application -->
+            <a href="mailto:qgrazell@gmail.com" class="btn">
+                Send Me an Email
+            </a>
+
+        </div>
+    </section>
+
+
+    <!-- ========================================= -->
+    <!-- FOOTER SECTION -->
+    <!-- ========================================= -->
+
+    <!-- Footer is the bottom part of the website.
+         It contains copyright information and development details. -->
+    <footer>
+
+        <!-- &copy; displays the copyright symbol -->
+        <p>
+            &copy; 2026 Grazell B. Quio.
+            All Rights Reserved.
+        </p>
+
+        <!-- Shows the technologies and software used to create the website -->
+        <p>
+            Designed with HTML and CSS in Visual Studio Code.
+        </p>
+
+    </footer>
+
+
+</body>
+</html>
